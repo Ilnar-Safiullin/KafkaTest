@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/kafka_producer_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:qwerty}
