@@ -1,4 +1,4 @@
-package org.example.consumer.dto;
+package org.example.consumer.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
+public class UserCreatedEvent {
     private Long id;
     private String name;
     private LocalDate birthday;

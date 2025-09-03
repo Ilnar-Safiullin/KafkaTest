@@ -1,6 +1,5 @@
-package org.example.producer.model;
+package org.example.producer.service.event;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,14 +9,9 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserCreatedEvent {
     private Long id;
-
     private String name;
-    private String email;
     private LocalDate birthday;
+    private String email;
 }
