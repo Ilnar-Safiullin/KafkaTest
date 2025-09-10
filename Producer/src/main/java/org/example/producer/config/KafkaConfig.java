@@ -68,4 +68,15 @@ public class KafkaConfig {
                 //min insync replicas указывать если несколько брокеров (мин-ое кол-во в синхроне с лидером)
                 .build();
     }
+
+    @Bean
+    public NewTopic userCreatedDltTopic() {
+        return TopicBuilder.name("create-user-event-topic-dlt")
+                .partitions(3)
+                .replicas(1)
+                .build();
+    }
+
 }
+// Ключ партиционирования. Разобраться с хронологией. (Ключ партиционирования)
+// Outbox
